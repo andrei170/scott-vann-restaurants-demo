@@ -326,8 +326,12 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   background-image: url('./photos/eggs-benedict.jpg');
   background-size: cover;
   background-position: center;
-  filter: brightness(0.45) saturate(1.15) contrast(1.05);
-  transform: scale(1.05);
+  filter: brightness(0.5) saturate(1.18) contrast(1.05);
+  animation: heroKenBurns 28s ease-in-out infinite alternate;
+}
+@keyframes heroKenBurns {
+  from { transform: scale(1.05) translate(0, 0); }
+  to { transform: scale(1.18) translate(-2%, -2.5%); }
 }
 .hero-bg::after {
   content: '';
@@ -1023,6 +1027,51 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   gap: 16px;
 }
 
+/* === Photo Gallery === */
+.gallery-section { background: var(--bg); }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 8px; margin-top: 40px; }
+.gallery-item { background-size: cover; background-position: center; border-radius: 4px; transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), filter 0.4s, box-shadow 0.4s; cursor: pointer; position: relative; overflow: hidden; }
+.gallery-item:hover { transform: scale(1.02); filter: brightness(1.08) saturate(1.05); z-index: 2; box-shadow: 0 12px 32px rgba(59, 42, 30, 0.25); }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+
+/* === Press Strip === */
+.press-strip { padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); background: var(--bg-elevated); position: relative; z-index: 2; }
+.press-strip-inner { display: flex; align-items: center; gap: 48px; flex-wrap: wrap; justify-content: center; }
+.press-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.press-item { font-family: var(--serif); font-size: 22px; font-weight: 400; font-style: italic; color: var(--cream-dim); letter-spacing: -0.01em; opacity: 0.65; transition: opacity 0.3s, color 0.3s; cursor: default; }
+.press-item:hover { opacity: 1; color: var(--gold); }
+
+/* === Live Activity Widget === */
+.live-widget { position: fixed; bottom: 24px; right: 24px; background: rgba(255,255,255,0.92); border: 1px solid var(--line); border-radius: 10px; padding: 18px 22px; box-shadow: 0 12px 36px rgba(59, 42, 30, 0.18); z-index: 50; backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); transform: translateY(120px); opacity: 0; transition: transform 0.7s cubic-bezier(0.16,1,0.3,1), opacity 0.4s; max-width: 280px; }
+.live-widget.visible { transform: translateY(0); opacity: 1; }
+.live-widget-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.live-widget-dot { width: 8px; height: 8px; border-radius: 50%; background: #2a9d4f; box-shadow: 0 0 0 0 rgba(42,157,79,0.7); animation: pulse 2s infinite; }
+.live-widget-stat { font-family: var(--serif); font-size: 17px; font-weight: 400; line-height: 1.3; color: var(--cream); margin-bottom: 6px; }
+.live-widget-stat strong { color: var(--gold-bright); font-weight: 500; }
+.live-widget-cta { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--gold-bright); margin-top: 6px; cursor: pointer; transition: color 0.2s; font-weight: 500; }
+.live-widget-cta:hover { color: var(--copper); }
+
+/* === Reservation Modal === */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(13,11,8,0.6); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); z-index: 200; display: none; align-items: center; justify-content: center; padding: 24px; opacity: 0; transition: opacity 0.3s; }
+.modal-backdrop.visible { display: flex; opacity: 1; }
+.modal { background: var(--bg-elevated); border: 1px solid var(--line); border-radius: 10px; max-width: 480px; width: 100%; padding: 44px; transform: translateY(40px) scale(0.95); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); position: relative; box-shadow: 0 24px 64px rgba(59, 42, 30, 0.25); }
+.modal-backdrop.visible .modal { transform: translateY(0) scale(1); }
+.modal-close { position: absolute; top: 20px; right: 20px; background: transparent; border: 1px solid var(--line); border-radius: 50%; width: 36px; height: 36px; display: grid; place-items: center; cursor: pointer; color: var(--cream); font-size: 18px; transition: border-color 0.2s, color 0.2s; }
+.modal-close:hover { border-color: var(--gold); color: var(--gold); }
+.modal-eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; font-weight: 500; }
+.modal h3 { font-family: var(--serif); font-size: 38px; font-weight: 400; line-height: 1; letter-spacing: -0.02em; margin-bottom: 8px; }
+.modal h3 em { color: var(--gold); font-style: italic; }
+.modal-sub { color: var(--cream-dim); font-size: 14px; margin-bottom: 28px; }
+.modal-form { display: grid; gap: 16px; }
+.modal-field { display: flex; flex-direction: column; gap: 6px; }
+.modal-label { font-size: 11px; letter-spacing: 0.05em; color: var(--cream-dim); text-transform: uppercase; font-weight: 500; }
+.modal-input, .modal-select { background: var(--bg-card); border: 1px solid var(--line); padding: 14px 16px; font-family: var(--sans); font-size: 14px; color: var(--cream); border-radius: 4px; outline: none; transition: border-color 0.2s; }
+.modal-input:focus, .modal-select:focus { border-color: var(--gold); }
+.modal-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.modal-submit { background: var(--gold); color: #2a1e14; border: none; padding: 16px; font-family: var(--sans); font-size: 13px; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; border-radius: 4px; cursor: pointer; margin-top: 8px; transition: background 0.2s, transform 0.15s; }
+.modal-submit:hover { background: var(--gold-bright); transform: translateY(-1px); }
+
 /* === Reveal animation handled by GSAP === */
 
 /* === Responsive === */
@@ -1231,6 +1280,28 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   </div>
 </section>
 
+<section class="section gallery-section" id="gallery">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 04 / Gallery</span>
+        <h2 class="reveal">More from<br>the <em>kitchen.</em></h2>
+      </div>
+      <p class="reveal">Brunch is the headline. The rest of the menu has its own following. Breakfast tacos, breakfast burritos, hand-stretched paninis, sweet crepes, hot soup. The bar program runs all the way through to 3 PM.</p>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal" style="background-image: url('./photos/eggs-benedict-coffee.jpg');"></div>
+      <div class="gallery-item reveal" style="background-image: url('./photos/burrito.jpg');"></div>
+      <div class="gallery-item reveal" style="background-image: url('./photos/vegetable-hash.jpg');"></div>
+      <div class="gallery-item wide reveal" style="background-image: url('./photos/panini.jpg');"></div>
+      <div class="gallery-item reveal" style="background-image: url('./photos/bloody-mary.jpg');"></div>
+      <div class="gallery-item reveal" style="background-image: url('./photos/crepes.jpg');"></div>
+      <div class="gallery-item tall reveal" style="background-image: url('./photos/cinnamon-latte.jpg');"></div>
+      <div class="gallery-item reveal" style="background-image: url('./photos/soup.jpg');"></div>
+    </div>
+  </div>
+</section>
+
 <section class="section gameday-section" id="gameday">
   <div class="container">
     <div class="gameday-grid">
@@ -1318,6 +1389,19 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
     </div>
   </div>
 </section>
+
+<div class="press-strip">
+  <div class="container">
+    <div class="press-strip-inner">
+      <span class="press-label">As seen in</span>
+      <span class="press-item">Press Gazette</span>
+      <span class="press-item">WFRV</span>
+      <span class="press-item">Yelp · Top 10 Brunch</span>
+      <span class="press-item">Discover Green Bay</span>
+      <span class="press-item">Travel Wisconsin</span>
+    </div>
+  </div>
+</div>
 
 <section class="section visit-section" id="visit">
   <div class="container">
@@ -1473,6 +1557,60 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   </div>
 </footer>
 
+<div class="live-widget" id="liveWidget">
+  <div class="live-widget-header">
+    <span class="live-widget-dot"></span>
+    <span>Live now</span>
+  </div>
+  <div class="live-widget-stat"><strong>14 guests</strong> currently dining</div>
+  <div class="live-widget-stat">Next table: <strong>11:30 AM</strong></div>
+  <a href="#" class="live-widget-cta" data-reserve>Reserve now →</a>
+</div>
+
+<div class="modal-backdrop" id="reserveModal">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">×</button>
+    <div class="modal-eyebrow">The Creamery Downtown</div>
+    <h3>Reserve a <em>table.</em></h3>
+    <p class="modal-sub">Brunch books fast on weekends. Saturdays and gameday Sundays sell out two weeks out. Reserve early.</p>
+    <form class="modal-form" onsubmit="event.preventDefault(); document.getElementById('reserveModal').classList.remove('visible'); setTimeout(() => alert('Reservation confirmed. Confirmation email sent.'), 300);">
+      <div class="modal-row">
+        <div class="modal-field">
+          <label class="modal-label">Date</label>
+          <input class="modal-input" type="date" required>
+        </div>
+        <div class="modal-field">
+          <label class="modal-label">Time</label>
+          <select class="modal-select" required>
+            <option>8:00 AM</option><option>8:30 AM</option><option>9:00 AM</option>
+            <option>9:30 AM</option><option>10:00 AM</option><option>10:30 AM</option>
+            <option selected>11:00 AM</option><option>11:30 AM</option><option>12:00 PM</option>
+            <option>12:30 PM</option><option>1:00 PM</option><option>1:30 PM</option>
+            <option>2:00 PM</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-field">
+        <label class="modal-label">Party Size</label>
+        <select class="modal-select" required>
+          <option>1 guest</option><option selected>2 guests</option><option>3 guests</option>
+          <option>4 guests</option><option>5 guests</option><option>6 guests</option>
+          <option>7 guests</option><option>8 guests</option>
+        </select>
+      </div>
+      <div class="modal-field">
+        <label class="modal-label">Name</label>
+        <input class="modal-input" type="text" placeholder="Your name" required>
+      </div>
+      <div class="modal-field">
+        <label class="modal-label">Email</label>
+        <input class="modal-input" type="email" placeholder="your@email.com" required>
+      </div>
+      <button type="submit" class="modal-submit">Confirm Reservation</button>
+    </form>
+  </div>
+</div>
+
 <script>
 // === Header scroll state ===
 const header = document.getElementById('header');
@@ -1567,6 +1705,27 @@ document.querySelectorAll('.faq-question').forEach(q => {
 });
 
 // Magnetic CTA buttons (subtle)
+// Reservation modal
+const reserveModal = document.getElementById('reserveModal');
+const modalClose = document.getElementById('modalClose');
+const reserveTriggers = document.querySelectorAll('a[href="#reserve"], a[data-reserve], .btn-primary[href="#reserve"]');
+document.querySelectorAll('a').forEach(a => {
+  if (a.getAttribute('href') === '#reserve' || a.hasAttribute('data-reserve')) {
+    a.addEventListener('click', e => { e.preventDefault(); reserveModal.classList.add('visible'); });
+  }
+});
+modalClose.addEventListener('click', () => reserveModal.classList.remove('visible'));
+reserveModal.addEventListener('click', e => { if (e.target === reserveModal) reserveModal.classList.remove('visible'); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') reserveModal.classList.remove('visible'); });
+const dateInput = reserveModal.querySelector('input[type="date"]');
+if (dateInput) { const t = new Date(); dateInput.min = t.toISOString().split('T')[0]; dateInput.value = t.toISOString().split('T')[0]; }
+
+// Live widget reveal after scroll
+const liveWidget = document.getElementById('liveWidget');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) liveWidget.classList.add('visible');
+}, { once: false, passive: true });
+
 document.querySelectorAll('.btn-primary').forEach(btn => {
   btn.addEventListener('mousemove', e => {
     const rect = btn.getBoundingClientRect();
