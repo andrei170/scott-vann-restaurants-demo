@@ -153,6 +153,9 @@ a { color: var(--cream); text-decoration: none; }
 .btn-current:hover { border-color: var(--copper); color: var(--copper); }
 .btn-new { background: var(--gold); color: var(--bg); }
 .btn-new:hover { background: var(--gold-bright); }
+.restaurant-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; padding: 16px 24px 0; }
+.restaurant-strip-item { aspect-ratio: 1; background-size: cover; background-position: center; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; opacity: 0.85; }
+.restaurant-strip-item:hover { transform: scale(1.04); opacity: 1; }
 
 /* Scorecard */
 .scorecard {
@@ -286,6 +289,12 @@ footer {
         <div class="restaurant-image" style="background-image: url('./creamery/photos/eggs-benedict.jpg');">
           <div class="restaurant-name">The Creamery</div>
         </div>
+        <div class="restaurant-strip">
+          <div class="restaurant-strip-item" style="background-image: url('./creamery/photos/benedicts.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./creamery/photos/mimosa-waffles.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./creamery/photos/tacos.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./creamery/photos/avocado-toast.jpg');"></div>
+        </div>
         <div class="restaurant-body">
           <p>Made-from-scratch brunch on the City Deck. Repositioned around the 17 mimosa flavors and Packers gameday traffic.</p>
           <div class="restaurant-buttons">
@@ -299,6 +308,12 @@ footer {
         <div class="restaurant-image" style="background-image: url('./plank-road/photos/Whiskey-Old-Fashioned-Burger.jpg');">
           <div class="restaurant-name">Plank Road</div>
         </div>
+        <div class="restaurant-strip">
+          <div class="restaurant-strip-item" style="background-image: url('./plank-road/photos/BOURBON-BRISKET-FLATBREAD.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./plank-road/photos/STEAK-FRITES.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./plank-road/photos/Reuben.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./plank-road/photos/whiskeys-lrg.jpg');"></div>
+        </div>
         <div class="restaurant-body">
           <p>De Pere pub repositioned around the bourbon program, the Whiskey Old Fashioned Burger, and the 1800s plank road heritage.</p>
           <div class="restaurant-buttons">
@@ -311,6 +326,12 @@ footer {
       <div class="restaurant-card">
         <div class="restaurant-image" style="background-image: url('./narrow-bridge/photos/slider-burger.jpg');">
           <div class="restaurant-name">Narrow Bridge</div>
+        </div>
+        <div class="restaurant-strip">
+          <div class="restaurant-strip-item" style="background-image: url('./narrow-bridge/photos/pizza.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./narrow-bridge/photos/burgers.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./narrow-bridge/photos/slider-wings.jpg');"></div>
+          <div class="restaurant-strip-item" style="background-image: url('./narrow-bridge/photos/whiskey.jpg');"></div>
         </div>
         <div class="restaurant-body">
           <p>Howard music venue and pub repositioned around the live music program and the largest patio in town.</p>
