@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0b08">
+
+<title>Narrow Bridge Plate & Pour | Live Music & Patio Dining in Howard, WI</title>
+<meta name="description" content="Live music every weekend on the largest patio in Howard. Wood-fired pizza, hand-breaded lake perch, build-your-own burgers. Studio-quality stage. Real Wisconsin pub food.">
+<meta name="keywords" content="live music Green Bay, patio dining Green Bay, best wings Howard WI, wood-fired pizza Green Bay, lake perch Wisconsin, late night Howard WI">
+
+<link rel="canonical" href="https://narrowbridgeplateandpour.com/">
+
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:title" content="Narrow Bridge Plate & Pour | Live Music + Patio">
+<meta property="og:description" content="The biggest outdoor stage in Howard. Wood-fired pizza, lake perch, live music every weekend.">
+<meta property="og:url" content="https://narrowbridgeplateandpour.com/">
+<meta property="og:image" content="https://narrowbridgeplateandpour.com/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Narrow Bridge | Live Music + Patio">
+<meta name="twitter:description" content="Music, plates, pours, and the patio that becomes a stage.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.42/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://narrowbridgeplateandpour.com/#restaurant",
+  "name": "Narrow Bridge Plate & Pour",
+  "image": ["https://narrowbridgeplateandpour.com/photos/slider-burger.jpg"],
+  "url": "https://narrowbridgeplateandpour.com/",
+  "telephone": "+1-920-499-2700",
+  "priceRange": "$$",
+  "servesCuisine": ["American", "Pub Food", "Pizza", "Bar"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2401 Hillcrest Heights Dr",
+    "addressLocality": "Howard",
+    "addressRegion": "WI",
+    "postalCode": "54313",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Thursday"], "opens": "11:00", "closes": "22:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "11:00", "closes": "00:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "21:00"}
+  ],
+  "acceptsReservations": "True",
+  "menu": "https://narrowbridgeplateandpour.com/menu/",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menu",
+    "hasMenuSection": [{
+      "@type": "MenuSection",
+      "name": "Plates",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Build-Your-Own Burger", "description": "House-ground beef, twelve toppings, baked-fresh brioche"},
+        {"@type": "MenuItem", "name": "Wood-Fired Pizza", "description": "Hand-stretched dough, San Marzano tomato, fresh mozzarella"},
+        {"@type": "MenuItem", "name": "Lake Perch Plate", "description": "Hand-breaded Wisconsin lake perch, hand-cut frites, slaw"}
+      ]
+    }]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.3",
+    "reviewCount": "184",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "When is live music?", "acceptedAnswer": {"@type": "Answer", "text": "Live music every Friday and Saturday night, plus a curated Sunday matinee one weekend a month. Indoor stage in the colder months, outdoor patio stage spring through fall."}},
+    {"@type": "Question", "name": "Is the patio open year-round?", "acceptedAnswer": {"@type": "Answer", "text": "The patio is open spring through fall (April to October), weather permitting. Heated tents extend the season into early November."}},
+    {"@type": "Question", "name": "Where is Narrow Bridge?", "acceptedAnswer": {"@type": "Answer", "text": "2401 Hillcrest Heights Drive in Howard, just north of Green Bay. Free parking. Walk-in welcome."}},
+    {"@type": "Question", "name": "Why is it called Narrow Bridge?", "acceptedAnswer": {"@type": "Answer", "text": "Named for the single-lane narrow bridge that existed on Hillcrest Heights Road until 1982. The pub sits where the bridge once narrowed local traffic into a slower pace. We kept that idea."}},
+    {"@type": "Question", "name": "Can I book the patio for events?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The patio books for private events from May through October. Contact us for capacity, packages, and music-night scheduling."}}
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #0a0a0d;
+  --bg-elevated: #14141a;
+  --bg-card: #1c1c24;
+  --gold: #d9b377;
+  --gold-bright: #efc88a;
+  --copper: #c97553;
+  --cream: #f7f1e7;
+  --cream-dim: #d8cfc0;
+  --muted: #8a8a98;
+  --line: rgba(217, 179, 119, 0.18);
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --max: 1280px;
+  --radius: 4px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--cream); font-family: var(--sans);
+  font-weight: 400; line-height: 1.6; overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04; pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--cream); text-decoration: none; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.serif { font-family: var(--serif); }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
+
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
+  background: rgba(10,10,13,0.6); backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
+  transition: padding 0.3s ease, background 0.3s ease;
+}
+.header.scrolled { padding: 12px 0; background: rgba(10,10,13,0.92); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.logo { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: var(--cream); display: flex; align-items: center; gap: 10px; }
+.logo-mark {
+  width: 32px; height: 32px; border: 1.5px solid var(--gold); border-radius: 50%;
+  display: grid; place-items: center; font-size: 14px; font-weight: 600;
+  color: var(--gold); font-family: var(--serif);
+}
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a { font-size: 13px; font-weight: 500; color: var(--cream-dim); letter-spacing: 0.02em; transition: color 0.2s; position: relative; }
+.nav a:hover { color: var(--gold); }
+.nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
+.nav a:hover::after { width: 100%; }
+.header-cta { display: flex; align-items: center; gap: 14px; }
+.live-status { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--cream-dim); letter-spacing: 0.02em; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #2a9d4f; box-shadow: 0 0 0 0 rgba(42,157,79,0.7); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(42,157,79,0.6); } 70% { box-shadow: 0 0 0 8px rgba(42,157,79,0); } 100% { box-shadow: 0 0 0 0 rgba(42,157,79,0); } }
+.live-dot.closed { background: var(--copper); animation: none; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px;
+  border-radius: var(--radius); font-family: var(--sans); font-size: 13px;
+  font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: all 0.25s ease; cursor: pointer; border: none; white-space: nowrap;
+}
+.btn-primary { background: var(--gold); color: var(--bg); }
+.btn-primary:hover { background: var(--gold-bright); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--cream); border: 1px solid var(--line); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+.btn-large { padding: 18px 32px; font-size: 14px; }
+
+.hero { position: relative; min-height: 100vh; padding: 140px 0 80px; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('./photos/slider-burger.jpg');
+  background-size: cover; background-position: center;
+  filter: brightness(0.4) saturate(1.1) contrast(1.05);
+  transform: scale(1.05);
+}
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,10,13,0.5) 0%, rgba(10,10,13,0.7) 60%, rgba(10,10,13,1) 100%); }
+.hero-inner { position: relative; z-index: 2; max-width: 920px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; opacity: 0; transform: translateY(20px); }
+.hero-eyebrow-line { width: 48px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-size: clamp(48px, 8vw, 128px); font-weight: 300; line-height: 0.92;
+  letter-spacing: -0.035em; margin-bottom: 32px;
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+}
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--gold); font-variation-settings: "SOFT" 80, "WONK" 1; }
+.hero-line { display: block; overflow: hidden; }
+.hero-line span { display: inline-block; transform: translateY(110%); }
+.hero-meta { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); }
+.hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--cream-dim); }
+.hero-meta-item .stars { color: var(--gold); letter-spacing: 1px; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); }
+.hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 2; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--cream-dim); display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(180deg, var(--gold) 0%, transparent 100%); animation: scrollLine 2s ease-in-out infinite; }
+@keyframes scrollLine { 0%, 100% { transform: scaleY(0.6); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } }
+
+.marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; overflow: hidden; background: var(--bg-elevated); white-space: nowrap; }
+.marquee-track { display: inline-flex; gap: 64px; animation: marquee 40s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-item { font-family: var(--serif); font-size: 24px; font-weight: 300; font-style: italic; color: var(--cream-dim); display: inline-flex; align-items: center; gap: 64px; }
+.marquee-item::after { content: '✦'; color: var(--gold); font-style: normal; font-size: 14px; }
+
+.section { padding: 140px 0; position: relative; z-index: 2; }
+.section-header { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; margin-bottom: 80px; align-items: end; }
+.section-header h2 { font-size: clamp(40px, 6vw, 88px); font-weight: 300; line-height: 0.95; letter-spacing: -0.025em; }
+.section-header h2 em { font-style: italic; color: var(--gold); font-variation-settings: "SOFT" 80, "WONK" 1; }
+.section-header p { font-size: 18px; color: var(--cream-dim); line-height: 1.6; max-width: 540px; }
+.section-number { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--gold); margin-bottom: 16px; display: block; }
+
+.diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.diff-item { padding: 56px 40px; border-right: 1px solid var(--line); position: relative; transition: background 0.3s; }
+.diff-item:last-child { border-right: none; }
+.diff-item:hover { background: var(--bg-elevated); }
+.diff-num { font-family: var(--serif); font-size: 12px; font-style: italic; color: var(--gold); margin-bottom: 24px; display: block; }
+.diff-item h3 { font-size: 28px; font-weight: 400; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.01em; }
+.diff-item p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; }
+
+/* Stage section */
+.stage-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%); position: relative; overflow: hidden; }
+.stage-section::before {
+  content: ''; position: absolute; top: 0; left: -10%; width: 800px; height: 800px;
+  background: radial-gradient(circle, rgba(217,179,119,0.08) 0%, transparent 70%);
+  filter: blur(40px);
+}
+.stage-feature { position: relative; aspect-ratio: 21/9; border-radius: var(--radius); overflow: hidden; margin-top: 40px; border: 1px solid var(--line); }
+.stage-feature-image { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.6s; }
+.stage-feature:hover .stage-feature-image { transform: scale(1.03); }
+.stage-feature::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(10,10,13,0.85) 0%, rgba(10,10,13,0.3) 70%); }
+.stage-feature-body { position: absolute; bottom: 0; left: 0; padding: 56px; max-width: 580px; z-index: 2; }
+.stage-feature-meta { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--gold); margin-bottom: 16px; display: block; }
+.stage-feature h3 { font-size: clamp(36px, 4vw, 64px); font-weight: 400; line-height: 1; letter-spacing: -0.025em; margin-bottom: 16px; }
+.stage-feature p { color: var(--cream-dim); font-size: 16px; line-height: 1.6; }
+
+.stage-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 24px; }
+.stage-card { padding: 40px; background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); transition: all 0.3s; }
+.stage-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.stage-card-day { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--gold); margin-bottom: 16px; display: block; }
+.stage-card h4 { font-size: 24px; font-weight: 400; line-height: 1.15; margin-bottom: 12px; letter-spacing: -0.01em; }
+.stage-card p { color: var(--cream-dim); font-size: 14px; line-height: 1.6; }
+
+/* Menu */
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px; }
+.menu-card { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-card); border: 1px solid var(--line); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.menu-card:hover { transform: translateY(-6px); }
+.menu-card-image { aspect-ratio: 16/10; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.menu-card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(10,10,13,0.7) 100%); }
+.menu-card-body { padding: 32px; }
+.menu-card-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 16px; }
+.menu-card h3 { font-size: 28px; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; }
+.menu-card-price { font-family: var(--serif); font-size: 24px; color: var(--gold); font-style: italic; font-weight: 400; white-space: nowrap; }
+.menu-card p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; }
+.menu-card-tag { display: inline-block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 2px; }
+.menu-cta { margin-top: 56px; text-align: center; }
+
+/* Patio section */
+.patio-section { background: var(--bg-elevated); position: relative; overflow: hidden; }
+.patio-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.patio-image { aspect-ratio: 4/5; background: url('./photos/gallery-11.jpg') center / cover; border-radius: var(--radius); position: relative; overflow: hidden; }
+.patio-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(10,10,13,0.5) 100%); }
+.patio-content h2 { font-size: clamp(36px, 5vw, 72px); font-weight: 300; line-height: 0.98; letter-spacing: -0.025em; margin-bottom: 32px; }
+.patio-content h2 em { font-style: italic; color: var(--gold); }
+.patio-content p { color: var(--cream-dim); font-size: 17px; line-height: 1.7; margin-bottom: 24px; max-width: 480px; }
+.patio-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.patio-stat-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.patio-stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Visit */
+.visit-section { background: var(--bg); }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.visit-info-block { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.visit-info-block:last-child { border-bottom: none; margin-bottom: 0; }
+.visit-info-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.visit-info-value { font-family: var(--serif); font-size: 28px; font-weight: 300; line-height: 1.3; letter-spacing: -0.01em; }
+.visit-info-value a:hover { color: var(--gold); }
+.visit-hours-list { list-style: none; display: grid; gap: 8px; }
+.visit-hours-list li { display: flex; justify-content: space-between; font-size: 16px; color: var(--cream-dim); padding: 4px 0; }
+.visit-hours-list .day { color: var(--cream); font-weight: 500; }
+.visit-map { aspect-ratio: 4/5; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--line); position: relative; overflow: hidden; background-image: url('./photos/gallery-11.jpg'); background-size: cover; background-position: center; }
+
+/* FAQ */
+.faq-list { margin-top: 40px; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-question { width: 100%; background: transparent; border: none; padding: 32px 0; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 400; letter-spacing: -0.01em; transition: color 0.3s; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; transition: transform 0.3s, border-color 0.3s; color: var(--gold); font-size: 18px; font-weight: 300; }
+.faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--gold); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--cream-dim); font-size: 16px; line-height: 1.7; }
+.faq-item.open .faq-answer { max-height: 300px; padding-bottom: 32px; }
+
+/* Footer */
+.footer { background: var(--bg-elevated); padding: 80px 0 32px; border-top: 1px solid var(--line); position: relative; z-index: 2; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; margin-bottom: 56px; }
+.footer-brand h3 { font-size: 28px; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 16px; }
+.footer-brand p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; max-width: 320px; }
+.footer-col h4 { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; font-family: var(--sans); font-weight: 500; }
+.footer-col ul { list-style: none; display: grid; gap: 12px; }
+.footer-col a { color: var(--cream-dim); font-size: 14px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 16px; }
+
+.reveal { opacity: 0; transform: translateY(40px); }
+
+@media (max-width: 1024px) {
+  .section-header { grid-template-columns: 1fr; gap: 32px; }
+  .menu-grid, .patio-grid, .visit-grid, .stage-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .diff-item { border-right: none; border-bottom: 1px solid var(--line); }
+  .diff-item:last-child { border-bottom: none; }
+  .stage-feature-body { padding: 32px; }
+}
+@media (max-width: 720px) {
+  .nav, .live-status { display: none; }
+  .section { padding: 80px 0; }
+  .hero { padding: 120px 0 60px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .patio-stats { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">N</span>
+      <span>Narrow Bridge</span>
+    </a>
+    <nav class="nav">
+      <a href="#stage">The Stage</a>
+      <a href="#menu">Menu</a>
+      <a href="#patio">Patio</a>
+      <a href="#visit">Visit</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <div class="header-cta">
+      <div class="live-status">
+        <span class="live-dot" id="liveDot"></span>
+        <span id="liveLabel">Open · Closes 10 PM</span>
+      </div>
+      <a href="#visit" class="btn btn-primary">Reserve</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="eyebrow">Howard, WI · Live Music · Lake Perch · Late Hours</span>
+      </div>
+      <h1 class="display">
+        <span class="hero-line"><span>Music, plates,</span></span>
+        <span class="hero-line"><span>and the <em>patio</em></span></span>
+        <span class="hero-line"><span>that becomes a stage.</span></span>
+      </h1>
+      <div class="hero-meta" id="heroMeta">
+        <div class="hero-meta-item">
+          <span class="stars">★★★★</span>
+          <span>4.3 · 184 reviews · Loved by locals</span>
+        </div>
+        <div class="hero-meta-item">
+          <span style="color: var(--gold)">●</span>
+          <span>Live Music · Every Friday & Saturday</span>
+        </div>
+        <div class="hero-meta-item">
+          <span style="color: var(--gold)">●</span>
+          <span>The Largest Patio in Howard</span>
+        </div>
+      </div>
+      <div class="hero-cta" id="heroCta">
+        <a href="#visit" class="btn btn-primary btn-large">Reserve a Table</a>
+        <a href="#stage" class="btn btn-ghost btn-large">See What's Playing →</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item">Live Music · Friday & Saturday</div>
+    <div class="marquee-item">The Patio Stage</div>
+    <div class="marquee-item">Wood-Fired Pizza</div>
+    <div class="marquee-item">Lake Perch · Hand-Breaded</div>
+    <div class="marquee-item">Build-Your-Own Burger</div>
+    <div class="marquee-item">Open Late</div>
+    <div class="marquee-item">Live Music · Friday & Saturday</div>
+    <div class="marquee-item">The Patio Stage</div>
+    <div class="marquee-item">Wood-Fired Pizza</div>
+    <div class="marquee-item">Lake Perch · Hand-Breaded</div>
+    <div class="marquee-item">Build-Your-Own Burger</div>
+    <div class="marquee-item">Open Late</div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="diff-grid">
+      <div class="diff-item reveal">
+        <span class="diff-num">01 / The Stage</span>
+        <h3>Studio-quality sound. Real Wisconsin acts. Every weekend.</h3>
+        <p>Top-of-the-line audio, lighting, and stage equipment. Local bands, regional acts, the occasional out-of-state name. The patio stage runs spring through fall. The indoor stage runs year-round.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">02 / The Patio</span>
+        <h3>The biggest outdoor space in Howard.</h3>
+        <p>Heated. Covered when it rains. Music when the weather plays nice. The kind of patio that turns a Friday dinner into a Friday night.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">03 / The Plates</span>
+        <h3>Wisconsin food, executed seriously.</h3>
+        <p>Wood-fired pizza on hand-stretched dough. Hand-breaded Wisconsin lake perch. Build-your-own burgers on brioche baked the day of. Real food, served late.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section stage-section" id="stage">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 02 / The Stage</span>
+        <h2 class="reveal">The patio<br>becomes <em>a stage.</em></h2>
+      </div>
+      <p class="reveal">We didn't build a restaurant that hosts music. We built a music venue that happens to serve some of the best food in Howard. Studio-quality sound, real lighting, and the largest outdoor stage in the area.</p>
+    </div>
+
+    <div class="stage-feature reveal">
+      <div class="stage-feature-image" style="background-image: url('./photos/specials-tile.jpg');"></div>
+      <div class="stage-feature-body">
+        <span class="stage-feature-meta">Every Friday + Saturday · 8 PM</span>
+        <h3>Live, every weekend.</h3>
+        <p>Local bands open. Regional headliners close. Walk-in welcome. Reserved tables get the front row. The kind of weekend Howard deserves.</p>
+      </div>
+    </div>
+
+    <div class="stage-grid">
+      <div class="stage-card reveal">
+        <span class="stage-card-day">Friday · 8 PM</span>
+        <h4>Local Spotlight</h4>
+        <p>Wisconsin acts get the Friday slot. Singer-songwriters, three-pieces, full bands. Most under thirty. All under priced.</p>
+      </div>
+      <div class="stage-card reveal">
+        <span class="stage-card-day">Saturday · 9 PM</span>
+        <h4>Regional Headliners</h4>
+        <p>Touring acts from Milwaukee, Madison, Chicago. The names that show up at Summerfest before they get big.</p>
+      </div>
+      <div class="stage-card reveal">
+        <span class="stage-card-day">One Sunday a Month · 2 PM</span>
+        <h4>Patio Matinee</h4>
+        <p>Acoustic, jazz, occasional bluegrass. Family-friendly. The patio at its best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 03 / The Plates</span>
+        <h2 class="reveal">Food, served<br><em>seriously.</em></h2>
+      </div>
+      <p class="reveal">The food is the reason locals come back when there isn't a band playing. Wood-fired pizza, hand-breaded perch, burgers ground in-house. Real Wisconsin pub food, executed properly.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/burgers.jpg');"></div>
+        <div class="menu-card-body">
+          <span class="menu-card-tag">Signature</span>
+          <div class="menu-card-head">
+            <h3>Build-Your-Own Burger</h3>
+            <span class="menu-card-price">$15</span>
+          </div>
+          <p>House-ground beef on a brioche bun baked the day of. Twelve toppings, six cheeses, four sauces. Build it your way.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/pizza.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Wood-Fired Pizza</h3>
+            <span class="menu-card-price">$16</span>
+          </div>
+          <p>Hand-stretched dough, San Marzano tomato, fresh mozzarella, basil from the garden when the weather permits.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/sandwiches.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Lake Perch Plate</h3>
+            <span class="menu-card-price">$22</span>
+          </div>
+          <p>Hand-breaded Wisconsin lake perch, hand-cut frites, slaw, lemon. The Friday fish fry that holds up Tuesdays.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/slider-wings.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Smoked Wings</h3>
+            <span class="menu-card-price">$13</span>
+          </div>
+          <p>Smoked over applewood, finished crispy, tossed in our six-pepper rub. The wings to order before the band starts.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/pasta.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>House Pasta</h3>
+            <span class="menu-card-price">$18</span>
+          </div>
+          <p>Rotating pasta of the week, made fresh in-house. Ask the server. Some weeks it's gnocchi. Some weeks it's the carbonara of your life.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/sharables.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Sharables Board</h3>
+            <span class="menu-card-price">$24</span>
+          </div>
+          <p>Smoked meats, Wisconsin cheese, pickled vegetables, jam, crackers. Built for two. Survives four. Pairs with the bourbon.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-cta reveal">
+      <a href="/menu/" class="btn btn-ghost btn-large">View the Full Menu →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section patio-section" id="patio">
+  <div class="container">
+    <div class="patio-grid">
+      <div class="patio-image reveal"></div>
+      <div class="patio-content">
+        <span class="section-number reveal">— 04 / The Patio</span>
+        <h2 class="reveal">An outdoor<br><em>music room.</em></h2>
+        <p class="reveal">When we built the patio, we built it for nights that turn into weekends. Heated for the shoulder seasons. Covered when the weather turns. Sound system tuned for the back row.</p>
+        <p class="reveal">May through October, the patio runs full. Music. Food. The slow Wisconsin evening. The kind of outdoor space that didn't exist in Howard until we built it.</p>
+        <div class="patio-stats">
+          <div class="reveal">
+            <div class="patio-stat-num">120</div>
+            <div class="patio-stat-label">Patio Seats</div>
+          </div>
+          <div class="reveal">
+            <div class="patio-stat-num">52</div>
+            <div class="patio-stat-label">Music Nights · Per Year</div>
+          </div>
+          <div class="reveal">
+            <div class="patio-stat-num">May–Oct</div>
+            <div class="patio-stat-label">Open Seasonally</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <a href="#visit" class="btn btn-primary btn-large">Reserve the Patio</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section visit-section" id="visit">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 05 / Visit</span>
+        <h2 class="reveal">Just north of<br><em>Green Bay.</em></h2>
+      </div>
+      <p class="reveal">Free parking. Walk-in welcome. Reservations recommended on music nights. Five minutes off Highway 41.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Address</div>
+          <div class="visit-info-value">
+            <a href="https://maps.google.com/?q=2401+Hillcrest+Heights+Dr,+Howard,+WI" target="_blank">2401 Hillcrest Heights Drive<br>Howard, WI 54313</a>
+          </div>
+        </div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Call</div>
+          <div class="visit-info-value">
+            <a href="tel:+19204992700">(920) 499-2700</a>
+          </div>
+        </div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Hours</div>
+          <ul class="visit-hours-list">
+            <li><span class="day">Tuesday</span> <span>11:00 AM &ndash; 10:00 PM</span></li>
+            <li><span class="day">Wednesday</span> <span>11:00 AM &ndash; 10:00 PM</span></li>
+            <li><span class="day">Thursday</span> <span>11:00 AM &ndash; 10:00 PM</span></li>
+            <li><span class="day">Friday</span> <span>11:00 AM &ndash; 12:00 AM</span></li>
+            <li><span class="day">Saturday</span> <span>11:00 AM &ndash; 12:00 AM</span></li>
+            <li><span class="day">Sunday</span> <span>11:00 AM &ndash; 9:00 PM</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="visit-map reveal"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container" style="max-width: 920px;">
+    <div class="section-header" style="grid-template-columns: 1fr; gap: 32px;">
+      <div>
+        <span class="section-number reveal">— 06 / Questions</span>
+        <h2 class="reveal">Asked <em>often.</em></h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>When is live music?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Live music every Friday and Saturday night, plus a curated Sunday matinee one weekend a month. Indoor stage in colder months, outdoor patio stage spring through fall.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Is the patio open year-round?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>The patio is open spring through fall (April to October), weather permitting. Heated tents extend the season into early November.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Where is Narrow Bridge?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>2401 Hillcrest Heights Drive in Howard, just north of Green Bay. Five minutes off Highway 41. Free parking on site.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Why is it called Narrow Bridge?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Named for the single-lane narrow bridge that existed on Hillcrest Heights Road until 1982. The pub sits where the bridge once narrowed local traffic into a slower pace. We kept that idea.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Can I book the patio for events?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. The patio books for private events from May through October. Contact us for capacity, packages, and music-night scheduling.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Do you take reservations on music nights?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Strongly recommended for Friday and Saturday nights. Reserved tables get priority seating near the stage. Walk-in welcome at the bar and high-tops.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3 class="serif">Narrow Bridge Plate & Pour</h3>
+        <p>An outdoor music room with a kitchen attached. Howard, Wisconsin's late-night room since 2019.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=2401+Hillcrest+Heights+Dr,+Howard,+WI">2401 Hillcrest Heights Dr</a></li>
+          <li><a>Howard, WI 54313</a></li>
+          <li><a href="tel:+19204992700">(920) 499-2700</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#menu">Plates</a></li>
+          <li><a href="#stage">Live Music</a></li>
+          <li><a href="#patio">The Patio</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/narrowbridgegreenbay/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li><a>Music Updates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Narrow Bridge Plate & Pour · Howard, WI</span>
+      <span>Crafted by AG1 Consulting</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+function updateLiveStatus() {
+  const now = new Date();
+  const day = now.getDay();
+  const hour = now.getHours();
+  let isOpen = false;
+  if (day === 0) isOpen = hour >= 11 && hour < 21;
+  else if (day === 1) isOpen = false;
+  else if (day === 5 || day === 6) isOpen = hour >= 11 || hour < 1;
+  else isOpen = hour >= 11 && hour < 22;
+  const dot = document.getElementById('liveDot');
+  const label = document.getElementById('liveLabel');
+  if (isOpen) {
+    dot.classList.remove('closed');
+    label.textContent = (day === 5 || day === 6) ? 'Open · Music Tonight' : 'Open · Closes 10 PM';
+  } else {
+    dot.classList.add('closed');
+    label.textContent = day === 1 ? 'Closed Mondays' : 'Opens 11 AM';
+  }
+}
+updateLiveStatus();
+setInterval(updateLiveStatus, 60000);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.timeline({ delay: 0.3 })
+  .to('.hero-line span', { y: 0, duration: 1.2, stagger: 0.15, ease: 'power3.out' })
+  .to('#heroEyebrow', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.6')
+  .to('#heroMeta', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5')
+  .to('#heroCta', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5');
+
+gsap.utils.toArray('.reveal').forEach(el => {
+  gsap.to(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none reverse' },
+    opacity: 1, y: 0, duration: 1, ease: 'power3.out'
+  });
+});
+
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x*0.15}px, ${y*0.15}px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+</script>
+
+</body>
+</html>

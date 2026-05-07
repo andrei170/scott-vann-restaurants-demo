@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scott Vann · Three Restaurants · Before vs After</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d0b08;
+  --bg-elevated: #1a1612;
+  --bg-card: #221d18;
+  --gold: #d9b377;
+  --gold-bright: #efc88a;
+  --copper: #c97553;
+  --red: #c25f4a;
+  --green: #6ba56e;
+  --cream: #f7f1e7;
+  --cream-dim: #d8cfc0;
+  --muted: #9a8b73;
+  --line: rgba(217, 179, 119, 0.18);
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--cream); font-family: var(--sans);
+  line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.03; pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+}
+a { color: var(--cream); text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+
+.hero { padding: 120px 0 80px; text-align: center; position: relative; z-index: 2; }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 500; margin-bottom: 24px; display: block; }
+.hero h1 {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(48px, 7vw, 96px); line-height: 0.95;
+  letter-spacing: -0.025em; max-width: 1000px; margin: 0 auto 32px;
+}
+.hero h1 em { font-style: italic; color: var(--gold); }
+.hero p { color: var(--cream-dim); font-size: 18px; max-width: 640px; margin: 0 auto; }
+
+.section { padding: 80px 0; position: relative; z-index: 2; }
+.section-title {
+  font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 300;
+  letter-spacing: -0.02em; line-height: 1; margin-bottom: 16px;
+}
+.section-title em { font-style: italic; color: var(--gold); }
+.section-sub { color: var(--cream-dim); font-size: 17px; margin-bottom: 56px; max-width: 640px; }
+
+/* Restaurant comparison cards */
+.compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 80px; }
+.compare-card {
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  background: var(--bg-card); transition: transform 0.3s, border-color 0.3s;
+}
+.compare-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.compare-label {
+  padding: 16px 24px; font-size: 11px; letter-spacing: 0.22em;
+  text-transform: uppercase; font-weight: 500;
+}
+.compare-label.current { background: rgba(194, 95, 74, 0.12); color: var(--copper); border-bottom: 1px solid rgba(194, 95, 74, 0.3); }
+.compare-label.new { background: rgba(217, 179, 119, 0.12); color: var(--gold); border-bottom: 1px solid var(--line); }
+.compare-preview {
+  aspect-ratio: 16/10; background: var(--bg-elevated); position: relative;
+  overflow: hidden;
+}
+.compare-preview iframe {
+  position: absolute; top: 0; left: 0; width: 200%; height: 200%;
+  transform: scale(0.5); transform-origin: top left;
+  border: 0; pointer-events: none;
+}
+.compare-preview-fallback {
+  position: absolute; inset: 0; display: flex; align-items: center;
+  justify-content: center; flex-direction: column; gap: 16px; padding: 32px;
+  text-align: center; background-size: cover; background-position: center;
+}
+.compare-preview-fallback::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(13,11,8,0.5), rgba(13,11,8,0.85));
+}
+.compare-preview-fallback > * { position: relative; z-index: 2; }
+.compare-preview-fallback h3 {
+  font-family: var(--serif); font-size: 32px; font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.compare-body { padding: 28px 32px; }
+.compare-body h4 {
+  font-family: var(--serif); font-size: 22px; font-weight: 400;
+  margin-bottom: 8px; letter-spacing: -0.01em;
+}
+.compare-body p { color: var(--cream-dim); font-size: 14px; margin-bottom: 20px; }
+.compare-body ul { list-style: none; margin-bottom: 24px; }
+.compare-body li {
+  padding: 6px 0; font-size: 14px; color: var(--cream-dim);
+  display: flex; align-items: flex-start; gap: 10px;
+}
+.compare-body li::before {
+  font-size: 12px; margin-top: 2px; flex-shrink: 0;
+}
+.current li::before { content: '✗'; color: var(--copper); font-weight: 700; }
+.new li::before { content: '✓'; color: var(--green); font-weight: 700; }
+.compare-cta {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px;
+  border-radius: 4px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; transition: all 0.25s;
+}
+.cta-current {
+  border: 1px solid rgba(194,95,74,0.4); color: var(--copper);
+}
+.cta-current:hover { background: rgba(194,95,74,0.1); }
+.cta-new { background: var(--gold); color: var(--bg); }
+.cta-new:hover { background: var(--gold-bright); }
+
+/* All restaurants */
+.restaurants-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 64px; }
+.restaurant-card {
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  background: var(--bg-card); transition: all 0.3s;
+}
+.restaurant-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.restaurant-image {
+  aspect-ratio: 4/3; background-size: cover; background-position: center;
+  position: relative;
+}
+.restaurant-image::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(13,11,8,0.85));
+}
+.restaurant-name {
+  position: absolute; bottom: 24px; left: 24px; right: 24px; z-index: 2;
+  font-family: var(--serif); font-size: 28px; font-weight: 400;
+  letter-spacing: -0.01em;
+}
+.restaurant-body { padding: 24px; }
+.restaurant-body p { color: var(--cream-dim); font-size: 14px; margin-bottom: 16px; min-height: 60px; }
+.restaurant-buttons { display: flex; gap: 8px; }
+.restaurant-buttons a {
+  flex: 1; text-align: center; padding: 10px 12px; border-radius: 4px;
+  font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
+  font-weight: 500; transition: all 0.25s;
+}
+.btn-current {
+  border: 1px solid var(--line); color: var(--cream-dim);
+}
+.btn-current:hover { border-color: var(--copper); color: var(--copper); }
+.btn-new { background: var(--gold); color: var(--bg); }
+.btn-new:hover { background: var(--gold-bright); }
+
+/* Scorecard */
+.scorecard {
+  border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
+  background: var(--bg-card);
+}
+.scorecard-header {
+  display: grid; grid-template-columns: 2fr 1fr 1fr; padding: 24px 32px;
+  background: var(--bg-elevated); border-bottom: 1px solid var(--line);
+  font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+  font-weight: 500;
+}
+.scorecard-row {
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  padding: 18px 32px; border-bottom: 1px solid var(--line);
+  align-items: center;
+}
+.scorecard-row:last-child { border-bottom: none; }
+.scorecard-row:hover { background: rgba(217, 179, 119, 0.03); }
+.scorecard-label { font-size: 15px; color: var(--cream); }
+.scorecard-cell { font-size: 14px; }
+.scorecard-cell.current { color: var(--copper); }
+.scorecard-cell.new { color: var(--green); font-weight: 500; }
+
+.cta-section { padding: 120px 0; text-align: center; position: relative; z-index: 2; }
+.cta-section::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(217,179,119,0.08), transparent 60%);
+}
+.cta-section h2 {
+  font-family: var(--serif); font-size: clamp(36px, 5vw, 64px); font-weight: 300;
+  letter-spacing: -0.025em; margin-bottom: 24px;
+}
+.cta-section h2 em { font-style: italic; color: var(--gold); }
+.cta-section p { color: var(--cream-dim); font-size: 17px; margin-bottom: 40px; max-width: 540px; margin-left: auto; margin-right: auto; }
+.cta-button {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 18px 36px; background: var(--gold); color: var(--bg);
+  border-radius: 4px; font-size: 14px; font-weight: 500;
+  letter-spacing: 0.04em; text-transform: uppercase;
+  transition: all 0.25s;
+}
+.cta-button:hover { background: var(--gold-bright); transform: translateY(-2px); }
+
+footer {
+  padding: 32px 0; border-top: 1px solid var(--line);
+  text-align: center; font-size: 12px; color: var(--muted);
+  position: relative; z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .compare-grid, .restaurants-grid { grid-template-columns: 1fr; }
+  .scorecard-header, .scorecard-row { grid-template-columns: 2fr 1fr 1fr; padding: 14px 20px; }
+}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Prepared for Scott Vann · AG1 Consulting</span>
+    <h1>Three restaurants.<br>Two very <em>different</em> futures.</h1>
+    <p>What your three sites look like today versus what they could look like in 90 days, with full schema, AI search optimization, and a design that lives up to your food.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The Creamery: <em>before vs after</em></h2>
+    <p class="section-sub">Same restaurant. Same food. Same City Deck location. Two different chances of being found.</p>
+
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label current">Today · Live Site</div>
+        <div class="compare-preview">
+          <div class="compare-preview-fallback" style="background-image: linear-gradient(135deg, rgba(120,80,60,0.4), rgba(60,40,30,0.6));">
+            <h3>thecreamerycafe.com</h3>
+            <p style="color: var(--cream-dim); font-size: 14px;">Click to view the live site as it stands today</p>
+          </div>
+        </div>
+        <div class="compare-body current">
+          <h4>What's there now</h4>
+          <p>The current build was solid five years ago. Today it's missing the modern infrastructure that drives visibility.</p>
+          <ul>
+            <li>No structured data (Google can't pull stars, prices, hours)</li>
+            <li>No meta description (Google search results look bare)</li>
+            <li>No Open Graph image (broken social previews)</li>
+            <li>No reservation integration</li>
+            <li>No tourist-intent landing pages</li>
+            <li>No FAQ section for AI engines to lift</li>
+            <li>Generic template aesthetic</li>
+          </ul>
+          <a href="https://thecreamerycafe.com/" target="_blank" class="compare-cta cta-current">View Live Site →</a>
+        </div>
+      </div>
+
+      <div class="compare-card">
+        <div class="compare-label new">Proposed · A+ Rebuild</div>
+        <div class="compare-preview">
+          <div class="compare-preview-fallback" style="background-image: linear-gradient(135deg, rgba(217,179,119,0.25), rgba(13,11,8,0.85)), url('../creamery-website/photos/eggs-benedict.jpg');">
+            <h3>The Creamery, reimagined</h3>
+            <p style="color: var(--cream-dim); font-size: 14px;">Click to explore the new design</p>
+          </div>
+        </div>
+        <div class="compare-body new">
+          <h4>What we'd ship</h4>
+          <p>A premium dark-aesthetic rebuild built for Google AI search, AEO citations, and the kind of brunch reservations the menu deserves.</p>
+          <ul>
+            <li>Full Restaurant + Menu + FAQ + Review schema</li>
+            <li>Real Open Graph previews (no more broken social shares)</li>
+            <li>Live "Open Now" status, sticky reserve CTAs</li>
+            <li>17 mimosa flavors as an interactive feature</li>
+            <li>Dedicated Packers gameday landing section</li>
+            <li>FAQ schema (lifted by ChatGPT and Google AI verbatim)</li>
+            <li>GSAP-powered scroll animations, Fraunces serif, premium feel</li>
+          </ul>
+          <a href="../creamery-website/" target="_blank" class="compare-cta cta-new">Open the Demo →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">All three, <em>rebuilt.</em></h2>
+    <p class="section-sub">Because the visibility play is a portfolio play. The same playbook, ported to Plank Road and Narrow Bridge with their own identities preserved.</p>
+
+    <div class="restaurants-grid">
+      <div class="restaurant-card">
+        <div class="restaurant-image" style="background-image: url('../creamery-website/photos/eggs-benedict.jpg');">
+          <div class="restaurant-name">The Creamery</div>
+        </div>
+        <div class="restaurant-body">
+          <p>Made-from-scratch brunch on the City Deck. Repositioned around the 17 mimosa flavors and Packers gameday traffic.</p>
+          <div class="restaurant-buttons">
+            <a href="https://thecreamerycafe.com/" target="_blank" class="btn-current">Current Site</a>
+            <a href="../creamery-website/" target="_blank" class="btn-new">New Demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-image" style="background-image: url('../plank-road-website/photos/Whiskey-Old-Fashioned-Burger.jpg');">
+          <div class="restaurant-name">Plank Road</div>
+        </div>
+        <div class="restaurant-body">
+          <p>De Pere pub repositioned around the bourbon program, the Whiskey Old Fashioned Burger, and the 1800s plank road heritage.</p>
+          <div class="restaurant-buttons">
+            <a href="https://plankroadplateandpour.com/" target="_blank" class="btn-current">Current Site</a>
+            <a href="../plank-road-website/" target="_blank" class="btn-new">New Demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="restaurant-card">
+        <div class="restaurant-image" style="background-image: url('../narrow-bridge-website/photos/slider-burger.jpg');">
+          <div class="restaurant-name">Narrow Bridge</div>
+        </div>
+        <div class="restaurant-body">
+          <p>Howard music venue and pub repositioned around the live music program and the largest patio in town.</p>
+          <div class="restaurant-buttons">
+            <a href="https://narrowbridgeplateandpour.com/" target="_blank" class="btn-current">Current Site</a>
+            <a href="../narrow-bridge-website/" target="_blank" class="btn-new">New Demo →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">The <em>scorecard.</em></h2>
+    <p class="section-sub">Every signal Google and AI search engines check, with your three current sites graded against the rebuild.</p>
+
+    <div class="scorecard">
+      <div class="scorecard-header">
+        <div>Signal</div>
+        <div>Today (all 3)</div>
+        <div>After rebuild</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Restaurant + Menu schema</div>
+        <div class="scorecard-cell current">✗ None</div>
+        <div class="scorecard-cell new">✓ Full</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Meta description</div>
+        <div class="scorecard-cell current">✗ Missing</div>
+        <div class="scorecard-cell new">✓ Hand-crafted</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Open Graph image (social previews)</div>
+        <div class="scorecard-cell current">✗ Missing</div>
+        <div class="scorecard-cell new">✓ Optimized</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">H1 tag (Plank Rd, Narrow Br)</div>
+        <div class="scorecard-cell current">✗ Missing</div>
+        <div class="scorecard-cell new">✓ Present</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">FAQ schema (AI search)</div>
+        <div class="scorecard-cell current">✗ None</div>
+        <div class="scorecard-cell new">✓ 6 questions per site</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Live "Open Now" indicator</div>
+        <div class="scorecard-cell current">✗ Static</div>
+        <div class="scorecard-cell new">✓ Real-time JS</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Reservation infrastructure</div>
+        <div class="scorecard-cell current">✗ None</div>
+        <div class="scorecard-cell new">✓ Ready for OpenTable / Resy</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Tourist-intent landing pages</div>
+        <div class="scorecard-cell current">✗ None</div>
+        <div class="scorecard-cell new">✓ Gameday + heritage routes</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Conversion CTAs above the fold</div>
+        <div class="scorecard-cell current">~ Buried</div>
+        <div class="scorecard-cell new">✓ Sticky + magnetic</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Mobile experience</div>
+        <div class="scorecard-cell current">~ Functional</div>
+        <div class="scorecard-cell new">✓ Mobile-first design</div>
+      </div>
+      <div class="scorecard-row">
+        <div class="scorecard-label">Design tier</div>
+        <div class="scorecard-cell current">B-</div>
+        <div class="scorecard-cell new">A+</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container">
+    <h2>Ready to <em>rebuild?</em></h2>
+    <p>Three restaurants. One playbook. Ninety days. Let's talk.</p>
+    <a href="mailto:andreigivero@gmail.com" class="cta-button">Book the Strategy Call →</a>
+  </div>
+</section>
+
+<footer>
+  <span>AG1 Consulting · Andrei Givero · andreigivero@gmail.com</span>
+</footer>
+
+</body>
+</html>

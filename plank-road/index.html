@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0d0b08">
+
+<title>Plank Road Plate & Pour | Best Pub & Bourbon Bar in De Pere, WI</title>
+<meta name="description" content="A De Pere pub built on heritage. The Whiskey Old Fashioned Burger, Friday fish fry, 100+ bourbons, trivia nights. Named for the 1800s plank road that built Green Bay.">
+<meta name="keywords" content="pub De Pere, bourbon bar De Pere, best burger De Pere, fish fry De Pere, Wisconsin Old Fashioned, De Pere restaurants, trivia night De Pere">
+
+<link rel="canonical" href="https://plankroadplateandpour.com/">
+
+<meta property="og:type" content="restaurant.restaurant">
+<meta property="og:title" content="Plank Road Plate & Pour | Best Pub in De Pere, WI">
+<meta property="og:description" content="The Whiskey Old Fashioned Burger, Friday fish fry, 100+ bourbons. A pub named for the road that built Green Bay.">
+<meta property="og:url" content="https://plankroadplateandpour.com/">
+<meta property="og:image" content="https://plankroadplateandpour.com/og-hero.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Plank Road Plate & Pour | De Pere">
+<meta name="twitter:description" content="Bourbon, burgers, and the heritage of the road that built Green Bay.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lenis/1.0.42/lenis.min.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "@id": "https://plankroadplateandpour.com/#restaurant",
+  "name": "Plank Road Plate & Pour",
+  "image": ["https://plankroadplateandpour.com/photos/Whiskey-Old-Fashioned-Burger.jpg"],
+  "url": "https://plankroadplateandpour.com/",
+  "telephone": "+1-920-632-7051",
+  "priceRange": "$$",
+  "servesCuisine": ["American", "Pub Food", "Bar"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1632 Mid Valley Dr",
+    "addressLocality": "De Pere",
+    "addressRegion": "WI",
+    "postalCode": "54115",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "02:00"}
+  ],
+  "acceptsReservations": "True",
+  "menu": "https://plankroadplateandpour.com/menu/",
+  "hasMenu": {
+    "@type": "Menu",
+    "name": "Menu",
+    "hasMenuSection": [{
+      "@type": "MenuSection",
+      "name": "Signature Plates",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "Whiskey Old Fashioned Burger", "description": "House-ground beef glazed with our signature Wisconsin Old Fashioned reduction"},
+        {"@type": "MenuItem", "name": "Bourbon Brisket Flatbread", "description": "Wood-fired flatbread, slow-smoked brisket, bourbon glaze, smoked cheddar"},
+        {"@type": "MenuItem", "name": "Steak Frites", "description": "Wisconsin steak, hand-cut frites, herb butter"}
+      ]
+    }]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.0",
+    "reviewCount": "67",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "Where is Plank Road located?", "acceptedAnswer": {"@type": "Answer", "text": "Plank Road Plate & Pour is at 1632 Mid Valley Drive in De Pere, just off I-41, ten minutes from downtown Green Bay."}},
+    {"@type": "Question", "name": "Do you have Friday fish fry?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Beer-battered cod, baked haddock, and broasted chicken every Friday from 4 PM to close. The full Wisconsin treatment."}},
+    {"@type": "Question", "name": "How big is the bourbon list?", "acceptedAnswer": {"@type": "Answer", "text": "Over 100 bourbons in stock. Pour Friday flights of three for $24, or build your own from the wall."}},
+    {"@type": "Question", "name": "Is there trivia night?", "acceptedAnswer": {"@type": "Answer", "text": "Trivia every Wednesday at 7 PM. Karaoke every Thursday at 9 PM. Both are walk-in, free to play."}},
+    {"@type": "Question", "name": "Why is it called Plank Road?", "acceptedAnswer": {"@type": "Answer", "text": "Named for the wooden plank road built in the 1800s connecting Green Bay to Fond du Lac. It later became a railway, then the Fox River Trail. We sit just off the original alignment."}}
+  ]
+}
+</script>
+
+<style>
+:root {
+  --bg: #0d0b08;
+  --bg-elevated: #1a1612;
+  --bg-card: #221d18;
+  --gold: #c89465;
+  --gold-bright: #e0a878;
+  --copper: #a85a3a;
+  --cream: #f7f1e7;
+  --cream-dim: #d8cfc0;
+  --muted: #9a8b73;
+  --line: rgba(200, 148, 101, 0.18);
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', system-ui, sans-serif;
+  --max: 1280px;
+  --radius: 4px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg); color: var(--cream); font-family: var(--sans);
+  font-weight: 400; line-height: 1.6; overflow-x: hidden;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+body::before {
+  content: ''; position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+  opacity: 0.04; pointer-events: none; z-index: 1; mix-blend-mode: overlay;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--cream); text-decoration: none; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+.serif { font-family: var(--serif); }
+.eyebrow { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); font-weight: 500; }
+h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
+
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 18px 0;
+  background: rgba(13,11,8,0.6); backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px); border-bottom: 1px solid var(--line);
+  transition: padding 0.3s ease, background 0.3s ease;
+}
+.header.scrolled { padding: 12px 0; background: rgba(13,11,8,0.92); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.logo { font-family: var(--serif); font-size: 22px; font-weight: 500; letter-spacing: -0.01em; color: var(--cream); display: flex; align-items: center; gap: 10px; }
+.logo-mark {
+  width: 32px; height: 32px; border: 1.5px solid var(--gold); border-radius: 50%;
+  display: grid; place-items: center; font-size: 14px; font-weight: 600;
+  color: var(--gold); font-family: var(--serif);
+}
+.nav { display: flex; gap: 28px; align-items: center; }
+.nav a { font-size: 13px; font-weight: 500; color: var(--cream-dim); letter-spacing: 0.02em; transition: color 0.2s; position: relative; }
+.nav a:hover { color: var(--gold); }
+.nav a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--gold); transition: width 0.3s ease; }
+.nav a:hover::after { width: 100%; }
+.header-cta { display: flex; align-items: center; gap: 14px; }
+.live-status { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--cream-dim); letter-spacing: 0.02em; }
+.live-dot { width: 8px; height: 8px; border-radius: 50%; background: #2a9d4f; box-shadow: 0 0 0 0 rgba(42,157,79,0.7); animation: pulse 2s infinite; }
+@keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(42,157,79,0.6); } 70% { box-shadow: 0 0 0 8px rgba(42,157,79,0); } 100% { box-shadow: 0 0 0 0 rgba(42,157,79,0); } }
+.live-dot.closed { background: var(--copper); animation: none; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px; padding: 12px 22px;
+  border-radius: var(--radius); font-family: var(--sans); font-size: 13px;
+  font-weight: 500; letter-spacing: 0.04em; text-transform: uppercase;
+  transition: all 0.25s ease; cursor: pointer; border: none; white-space: nowrap;
+}
+.btn-primary { background: var(--gold); color: var(--bg); }
+.btn-primary:hover { background: var(--gold-bright); transform: translateY(-1px); }
+.btn-ghost { background: transparent; color: var(--cream); border: 1px solid var(--line); }
+.btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+.btn-large { padding: 18px 32px; font-size: 14px; }
+
+.hero { position: relative; min-height: 100vh; padding: 140px 0 80px; display: flex; align-items: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; z-index: 0; }
+.hero-bg::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: url('./photos/Whiskey-Old-Fashioned-Burger.jpg');
+  background-size: cover; background-position: center;
+  filter: brightness(0.4) saturate(1.1) contrast(1.05);
+  transform: scale(1.05);
+}
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,11,8,0.5) 0%, rgba(13,11,8,0.7) 60%, rgba(13,11,8,1) 100%); }
+.hero-inner { position: relative; z-index: 2; max-width: 920px; }
+.hero-eyebrow { display: flex; align-items: center; gap: 12px; margin-bottom: 28px; opacity: 0; transform: translateY(20px); }
+.hero-eyebrow-line { width: 48px; height: 1px; background: var(--gold); }
+.hero h1 {
+  font-size: clamp(48px, 8vw, 128px); font-weight: 300; line-height: 0.92;
+  letter-spacing: -0.035em; margin-bottom: 32px;
+  font-variation-settings: "SOFT" 30, "WONK" 0;
+}
+.hero h1 em { font-style: italic; font-weight: 300; color: var(--gold); font-variation-settings: "SOFT" 80, "WONK" 1; }
+.hero-line { display: block; overflow: hidden; }
+.hero-line span { display: inline-block; transform: translateY(110%); }
+.hero-meta { display: flex; align-items: center; gap: 24px; margin-bottom: 40px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); }
+.hero-meta-item { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--cream-dim); }
+.hero-meta-item .stars { color: var(--gold); letter-spacing: 1px; }
+.hero-cta { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); }
+.hero-scroll { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); z-index: 2; font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--cream-dim); display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.hero-scroll-line { width: 1px; height: 40px; background: linear-gradient(180deg, var(--gold) 0%, transparent 100%); animation: scrollLine 2s ease-in-out infinite; }
+@keyframes scrollLine { 0%, 100% { transform: scaleY(0.6); transform-origin: top; } 50% { transform: scaleY(1); transform-origin: top; } }
+
+.marquee { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 24px 0; overflow: hidden; background: var(--bg-elevated); white-space: nowrap; }
+.marquee-track { display: inline-flex; gap: 64px; animation: marquee 40s linear infinite; }
+@keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+.marquee-item { font-family: var(--serif); font-size: 24px; font-weight: 300; font-style: italic; color: var(--cream-dim); display: inline-flex; align-items: center; gap: 64px; }
+.marquee-item::after { content: '✦'; color: var(--gold); font-style: normal; font-size: 14px; }
+
+.section { padding: 140px 0; position: relative; z-index: 2; }
+.section-header { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; margin-bottom: 80px; align-items: end; }
+.section-header h2 { font-size: clamp(40px, 6vw, 88px); font-weight: 300; line-height: 0.95; letter-spacing: -0.025em; }
+.section-header h2 em { font-style: italic; color: var(--gold); font-variation-settings: "SOFT" 80, "WONK" 1; }
+.section-header p { font-size: 18px; color: var(--cream-dim); line-height: 1.6; max-width: 540px; }
+.section-number { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--gold); margin-bottom: 16px; display: block; }
+
+.diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.diff-item { padding: 56px 40px; border-right: 1px solid var(--line); position: relative; transition: background 0.3s; }
+.diff-item:last-child { border-right: none; }
+.diff-item:hover { background: var(--bg-elevated); }
+.diff-num { font-family: var(--serif); font-size: 12px; font-style: italic; color: var(--gold); margin-bottom: 24px; display: block; }
+.diff-item h3 { font-size: 28px; font-weight: 400; line-height: 1.15; margin-bottom: 16px; letter-spacing: -0.01em; }
+.diff-item p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; }
+
+/* Bar program 3-column */
+.bar-section { background: linear-gradient(180deg, var(--bg) 0%, var(--bg-elevated) 100%); position: relative; overflow: hidden; }
+.bar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+.bar-card { position: relative; aspect-ratio: 3/4; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.bar-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+.bar-card-image { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.6s; }
+.bar-card:hover .bar-card-image { transform: scale(1.05); }
+.bar-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 30%, rgba(13,11,8,0.95) 100%); }
+.bar-card-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 32px; z-index: 2; }
+.bar-card h3 { font-size: 32px; font-weight: 400; line-height: 1.1; margin-bottom: 8px; letter-spacing: -0.01em; }
+.bar-card p { color: var(--cream-dim); font-size: 14px; line-height: 1.5; }
+.bar-card-meta { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--gold); margin-bottom: 12px; display: block; }
+
+/* Menu */
+.menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; margin-top: 40px; }
+.menu-card { position: relative; border-radius: var(--radius); overflow: hidden; background: var(--bg-card); border: 1px solid var(--line); transition: transform 0.4s cubic-bezier(0.16,1,0.3,1); }
+.menu-card:hover { transform: translateY(-6px); }
+.menu-card-image { aspect-ratio: 16/10; background-size: cover; background-position: center; position: relative; overflow: hidden; }
+.menu-card-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(13,11,8,0.7) 100%); }
+.menu-card-body { padding: 32px; }
+.menu-card-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 12px; gap: 16px; }
+.menu-card h3 { font-size: 28px; font-weight: 400; line-height: 1.1; letter-spacing: -0.01em; }
+.menu-card-price { font-family: var(--serif); font-size: 24px; color: var(--gold); font-style: italic; font-weight: 400; white-space: nowrap; }
+.menu-card p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; }
+.menu-card-tag { display: inline-block; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 2px; }
+.menu-cta { margin-top: 56px; text-align: center; }
+
+/* Heritage section */
+.heritage-section { background: var(--bg-elevated); position: relative; overflow: hidden; }
+.heritage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.heritage-image { aspect-ratio: 4/5; background: url('./photos/gallery14.jpg') center / cover; border-radius: var(--radius); position: relative; overflow: hidden; }
+.heritage-image::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(13,11,8,0.5) 100%); }
+.heritage-content h2 { font-size: clamp(36px, 5vw, 72px); font-weight: 300; line-height: 0.98; letter-spacing: -0.025em; margin-bottom: 32px; }
+.heritage-content h2 em { font-style: italic; color: var(--gold); }
+.heritage-content p { color: var(--cream-dim); font-size: 17px; line-height: 1.7; margin-bottom: 24px; max-width: 480px; }
+.heritage-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 40px 0; padding: 32px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.heritage-stat-num { font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+.heritage-stat-label { font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); }
+
+/* Nights section */
+.nights-section { background: var(--bg); }
+.nights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; margin-top: 40px; }
+.night-card { aspect-ratio: 16/9; position: relative; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--line); }
+.night-card-image { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.night-card::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,11,8,0.85) 0%, rgba(13,11,8,0.4) 70%); }
+.night-card-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 40px; z-index: 2; }
+.night-card-day { font-family: var(--serif); font-size: 14px; font-style: italic; color: var(--gold); margin-bottom: 8px; display: block; }
+.night-card h3 { font-size: 36px; font-weight: 400; margin-bottom: 8px; letter-spacing: -0.01em; }
+.night-card p { color: var(--cream-dim); font-size: 14px; max-width: 320px; }
+
+/* Visit */
+.visit-section { background: var(--bg-elevated); }
+.visit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+.visit-info-block { padding-bottom: 32px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.visit-info-block:last-child { border-bottom: none; margin-bottom: 0; }
+.visit-info-label { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+.visit-info-value { font-family: var(--serif); font-size: 28px; font-weight: 300; line-height: 1.3; letter-spacing: -0.01em; }
+.visit-info-value a:hover { color: var(--gold); }
+.visit-hours-list { list-style: none; display: grid; gap: 8px; }
+.visit-hours-list li { display: flex; justify-content: space-between; font-size: 16px; color: var(--cream-dim); padding: 4px 0; }
+.visit-hours-list .day { color: var(--cream); font-weight: 500; }
+.visit-hours-list .closed { color: var(--copper); }
+.visit-map { aspect-ratio: 4/5; background: var(--bg-card); border-radius: var(--radius); border: 1px solid var(--line); position: relative; overflow: hidden; background-image: url('./photos/gallery1.jpg'); background-size: cover; background-position: center; }
+
+/* FAQ */
+.faq-list { margin-top: 40px; border-top: 1px solid var(--line); }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-question { width: 100%; background: transparent; border: none; padding: 32px 0; text-align: left; display: flex; justify-content: space-between; align-items: center; cursor: pointer; color: var(--cream); font-family: var(--serif); font-size: 24px; font-weight: 400; letter-spacing: -0.01em; transition: color 0.3s; }
+.faq-question:hover { color: var(--gold); }
+.faq-icon { width: 32px; height: 32px; border: 1px solid var(--line); border-radius: 50%; display: grid; place-items: center; flex-shrink: 0; transition: transform 0.3s, border-color 0.3s; color: var(--gold); font-size: 18px; font-weight: 300; }
+.faq-item.open .faq-icon { transform: rotate(45deg); border-color: var(--gold); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; color: var(--cream-dim); font-size: 16px; line-height: 1.7; }
+.faq-item.open .faq-answer { max-height: 300px; padding-bottom: 32px; }
+
+/* Footer */
+.footer { background: var(--bg-elevated); padding: 80px 0 32px; border-top: 1px solid var(--line); position: relative; z-index: 2; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 64px; margin-bottom: 56px; }
+.footer-brand h3 { font-size: 28px; font-weight: 300; letter-spacing: -0.01em; margin-bottom: 16px; }
+.footer-brand p { color: var(--cream-dim); font-size: 15px; line-height: 1.6; max-width: 320px; }
+.footer-col h4 { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px; font-family: var(--sans); font-weight: 500; }
+.footer-col ul { list-style: none; display: grid; gap: 12px; }
+.footer-col a { color: var(--cream-dim); font-size: 14px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--gold); }
+.footer-bottom { padding-top: 32px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: var(--muted); flex-wrap: wrap; gap: 16px; }
+
+.reveal { opacity: 0; transform: translateY(40px); }
+
+@media (max-width: 1024px) {
+  .section-header { grid-template-columns: 1fr; gap: 32px; }
+  .menu-grid, .heritage-grid, .visit-grid, .bar-grid, .nights-grid { grid-template-columns: 1fr; gap: 40px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .diff-grid { grid-template-columns: 1fr; }
+  .diff-item { border-right: none; border-bottom: 1px solid var(--line); }
+  .diff-item:last-child { border-bottom: none; }
+}
+@media (max-width: 720px) {
+  .nav, .live-status { display: none; }
+  .section { padding: 80px 0; }
+  .hero { padding: 120px 0 60px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .heritage-stats { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">P</span>
+      <span>Plank Road</span>
+    </a>
+    <nav class="nav">
+      <a href="#bar">Bar</a>
+      <a href="#menu">Menu</a>
+      <a href="#heritage">Heritage</a>
+      <a href="#nights">Nights</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="header-cta">
+      <div class="live-status">
+        <span class="live-dot" id="liveDot"></span>
+        <span id="liveLabel">Open · Closes 2 AM</span>
+      </div>
+      <a href="#visit" class="btn btn-primary">Reserve</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-eyebrow" id="heroEyebrow">
+        <span class="hero-eyebrow-line"></span>
+        <span class="eyebrow">De Pere · Pub & Grill · Off I-41</span>
+      </div>
+      <h1 class="display">
+        <span class="hero-line"><span>Burgers, <em>bourbon</em>,</span></span>
+        <span class="hero-line"><span>and the road</span></span>
+        <span class="hero-line"><span>that built Green Bay.</span></span>
+      </h1>
+      <div class="hero-meta" id="heroMeta">
+        <div class="hero-meta-item">
+          <span class="stars">★★★★</span>
+          <span>Real reviews from real Wisconsin pub-goers</span>
+        </div>
+        <div class="hero-meta-item">
+          <span style="color: var(--gold)">●</span>
+          <span>100+ Bourbons On The Wall</span>
+        </div>
+        <div class="hero-meta-item">
+          <span style="color: var(--gold)">●</span>
+          <span>Friday Fish Fry · Wednesday Trivia</span>
+        </div>
+      </div>
+      <div class="hero-cta" id="heroCta">
+        <a href="#visit" class="btn btn-primary btn-large">Reserve a Table</a>
+        <a href="#menu" class="btn btn-ghost btn-large">View the Menu →</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <span class="hero-scroll-line"></span>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <div class="marquee-item">Whiskey Old Fashioned Burger</div>
+    <div class="marquee-item">100+ Bourbons</div>
+    <div class="marquee-item">Friday Fish Fry</div>
+    <div class="marquee-item">Wednesday Trivia · 7 PM</div>
+    <div class="marquee-item">Thursday Karaoke · 9 PM</div>
+    <div class="marquee-item">Open Til 2 AM</div>
+    <div class="marquee-item">Whiskey Old Fashioned Burger</div>
+    <div class="marquee-item">100+ Bourbons</div>
+    <div class="marquee-item">Friday Fish Fry</div>
+    <div class="marquee-item">Wednesday Trivia · 7 PM</div>
+    <div class="marquee-item">Thursday Karaoke · 9 PM</div>
+    <div class="marquee-item">Open Til 2 AM</div>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="diff-grid">
+      <div class="diff-item reveal">
+        <span class="diff-num">01 / Heritage</span>
+        <h3>The pub that sits on the road that built the city.</h3>
+        <p>The plank road from Green Bay to Fond du Lac was the first highway in this part of Wisconsin. Built in the 1800s. We sit just off the original alignment. The food and the drinks honor that.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">02 / The Wall</span>
+        <h3>Over 100 bourbons. Twenty whiskeys. One serious wall.</h3>
+        <p>From Buffalo Trace to Pappy. Pour Friday flights of three for $24, build your own from the wall, or let the bartender lead. Wisconsin's drink. Done right.</p>
+      </div>
+      <div class="diff-item reveal">
+        <span class="diff-num">03 / The Nights</span>
+        <h3>Trivia Wednesdays. Karaoke Thursdays. Fish fry Fridays.</h3>
+        <p>The kind of pub Wisconsin actually wants. Free to play. Walk-in welcome. Bring the work crew. Bring the in-laws. Bring everyone.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section bar-section" id="bar">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 02 / The Bar Program</span>
+        <h2 class="reveal">Three pours,<br><em>done deeply.</em></h2>
+      </div>
+      <p class="reveal">Bourbon, beer, and the Wisconsin Old Fashioned. Three categories, sixty serious choices, one wall worth driving to. Pull up a stool. Sip slow. Stay late.</p>
+    </div>
+
+    <div class="bar-grid">
+      <div class="bar-card reveal">
+        <div class="bar-card-image" style="background-image: url('./photos/whiskeys-lrg.jpg');"></div>
+        <div class="bar-card-body">
+          <span class="bar-card-meta">100+ on the wall</span>
+          <h3>Bourbon</h3>
+          <p>From everyday-pour to the bottles you save for Sundays. Build your own flight or let the bartender pick.</p>
+        </div>
+      </div>
+      <div class="bar-card reveal">
+        <div class="bar-card-image" style="background-image: url('./photos/main-tiles-drinks.jpg');"></div>
+        <div class="bar-card-body">
+          <span class="bar-card-meta">Wisconsin's Drink</span>
+          <h3>Old Fashioneds</h3>
+          <p>Brandy, bourbon, or whiskey. Sweet, sour, or press. The Wisconsin Old Fashioned, exactly the way the state takes it.</p>
+        </div>
+      </div>
+      <div class="bar-card reveal">
+        <div class="bar-card-image" style="background-image: url('./photos/beer-lrg.jpg');"></div>
+        <div class="bar-card-body">
+          <span class="bar-card-meta">20+ on tap</span>
+          <h3>Beer</h3>
+          <p>Wisconsin local on rotation. Hinterland, Titletown, Copper State. Plus the macros for the lifelong loyalists.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="menu">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 03 / The Plates</span>
+        <h2 class="reveal">Pub food,<br>built <em>seriously.</em></h2>
+      </div>
+      <p class="reveal">A signature burger named for our cocktail. Smoked brisket on flatbread. Hand-cut frites. The Reuben that locals swear is the best in the county. Real pub food, executed properly.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/Whiskey-Old-Fashioned-Burger.jpg');"></div>
+        <div class="menu-card-body">
+          <span class="menu-card-tag">Signature</span>
+          <div class="menu-card-head">
+            <h3>Whiskey Old Fashioned Burger</h3>
+            <span class="menu-card-price">$18</span>
+          </div>
+          <p>House-ground beef, smoked cheddar, applewood bacon, glazed with our Wisconsin Old Fashioned reduction. The drink and the dinner, on one plate.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/BOURBON-BRISKET-FLATBREAD.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Bourbon Brisket Flatbread</h3>
+            <span class="menu-card-price">$17</span>
+          </div>
+          <p>Wood-fired flatbread, slow-smoked brisket, bourbon glaze, smoked cheddar, caramelized onions. Built to share. Or not.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/STEAK-FRITES.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Steak Frites</h3>
+            <span class="menu-card-price">$26</span>
+          </div>
+          <p>Wisconsin choice cut, hand-cut frites, herb butter, red wine reduction. Pub food that drinks like a steakhouse.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/Reuben.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>The Reuben</h3>
+            <span class="menu-card-price">$15</span>
+          </div>
+          <p>House-corned beef, sauerkraut, swiss, Russian dressing on grilled rye. The locals already know.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/GLAZED-SALMON.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>Maple-Glazed Salmon</h3>
+            <span class="menu-card-price">$24</span>
+          </div>
+          <p>Atlantic salmon, Wisconsin maple glaze, roasted vegetables, wild rice. Lighter side, full flavor.</p>
+        </div>
+      </article>
+
+      <article class="menu-card reveal">
+        <div class="menu-card-image" style="background-image: url('./photos/FRENCH-DIP.jpg');"></div>
+        <div class="menu-card-body">
+          <div class="menu-card-head">
+            <h3>French Dip</h3>
+            <span class="menu-card-price">$16</span>
+          </div>
+          <p>Slow-roasted prime rib, swiss, crusty hoagie, house au jus. Order it Friday with a fish fry on the side.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="menu-cta reveal">
+      <a href="/menu/" class="btn btn-ghost btn-large">View the Full Menu →</a>
+    </div>
+  </div>
+</section>
+
+<section class="section heritage-section" id="heritage">
+  <div class="container">
+    <div class="heritage-grid">
+      <div class="heritage-image reveal"></div>
+      <div class="heritage-content">
+        <span class="section-number reveal">— 04 / The Plank Road</span>
+        <h2 class="reveal">Built in 1800.<br><em>Still here.</em></h2>
+        <p class="reveal">In the mid-1800s, Wisconsin built a wooden plank road connecting Green Bay to Fond du Lac. It was the state's first real highway. It later became a railway, then the Fox River Trail you can walk today.</p>
+        <p class="reveal">We sit just off the original alignment. The pub takes its name and its character from that road. Built to last. Built for everyone passing through.</p>
+        <div class="heritage-stats">
+          <div class="reveal">
+            <div class="heritage-stat-num">1800<span style="font-size:24px">s</span></div>
+            <div class="heritage-stat-label">The Plank Road</div>
+          </div>
+          <div class="reveal">
+            <div class="heritage-stat-num">10</div>
+            <div class="heritage-stat-label">Min From Green Bay</div>
+          </div>
+          <div class="reveal">
+            <div class="heritage-stat-num">2 AM</div>
+            <div class="heritage-stat-label">Last Call · 6 Nights</div>
+          </div>
+        </div>
+        <div class="reveal">
+          <a href="#visit" class="btn btn-primary btn-large">Find the Pub</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section nights-section" id="nights">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 05 / The Nights</span>
+        <h2 class="reveal">Every night,<br>a <em>reason.</em></h2>
+      </div>
+      <p class="reveal">Wisconsin pubs run on rhythm. Fish on Fridays. Trivia midweek. Karaoke when the work week needs an off-ramp. Free to play. Walk-in welcome. Pull up a stool.</p>
+    </div>
+
+    <div class="nights-grid">
+      <div class="night-card reveal">
+        <div class="night-card-image" style="background-image: url('./photos/trivia.jpg');"></div>
+        <div class="night-card-body">
+          <span class="night-card-day">Wednesday · 7 PM</span>
+          <h3>Trivia Night</h3>
+          <p>Six rounds. Free to play. Bar tab to the winners. Bring your sharpest team.</p>
+        </div>
+      </div>
+      <div class="night-card reveal">
+        <div class="night-card-image" style="background-image: url('./photos/karaoke.jpg');"></div>
+        <div class="night-card-body">
+          <span class="night-card-day">Thursday · 9 PM</span>
+          <h3>Karaoke Night</h3>
+          <p>Sign-up at the bar. Sing what you want. The crowd is forgiving. The whiskey isn't.</p>
+        </div>
+      </div>
+      <div class="night-card reveal">
+        <div class="night-card-image" style="background-image: url('./photos/main-tiles-food.jpg');"></div>
+        <div class="night-card-body">
+          <span class="night-card-day">Friday · 4 PM to Close</span>
+          <h3>Fish Fry</h3>
+          <p>Beer-battered cod, baked haddock, broasted chicken. The full Wisconsin treatment. Reservations recommended.</p>
+        </div>
+      </div>
+      <div class="night-card reveal">
+        <div class="night-card-image" style="background-image: url('./photos/gallery7.jpg');"></div>
+        <div class="night-card-body">
+          <span class="night-card-day">Daily · 4 to 7 PM</span>
+          <h3>Happy Hour</h3>
+          <p>Discounted bourbons. Half-price flatbreads. The kind of after-work that becomes the whole night.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section visit-section" id="visit">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <span class="section-number reveal">— 06 / Visit</span>
+        <h2 class="reveal">Just off <em>I-41.</em></h2>
+      </div>
+      <p class="reveal">Ten minutes from downtown Green Bay. Free parking. Patio open spring through fall. Open six nights a week until 2 AM.</p>
+    </div>
+
+    <div class="visit-grid">
+      <div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Address</div>
+          <div class="visit-info-value">
+            <a href="https://maps.google.com/?q=1632+Mid+Valley+Dr,+De+Pere,+WI" target="_blank">1632 Mid Valley Drive<br>De Pere, WI 54115</a>
+          </div>
+        </div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Call</div>
+          <div class="visit-info-value">
+            <a href="tel:+19206327051">(920) 632-7051</a>
+          </div>
+        </div>
+        <div class="visit-info-block reveal">
+          <div class="visit-info-label">Hours</div>
+          <ul class="visit-hours-list">
+            <li><span class="day">Monday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Tuesday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Wednesday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Thursday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Friday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Saturday</span> <span>11:00 AM &ndash; 2:00 AM</span></li>
+            <li><span class="day">Sunday</span> <span class="closed">Closed</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="visit-map reveal"></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container" style="max-width: 920px;">
+    <div class="section-header" style="grid-template-columns: 1fr; gap: 32px;">
+      <div>
+        <span class="section-number reveal">— 07 / Questions</span>
+        <h2 class="reveal">Asked <em>often.</em></h2>
+      </div>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Where is Plank Road located?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>1632 Mid Valley Drive in De Pere, just off I-41. Ten minutes from downtown Green Bay. Free parking on site.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Do you have Friday fish fry?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. Beer-battered cod, baked haddock, and broasted chicken every Friday from 4 PM to close. Reservations strongly recommended for Friday nights.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>How big is the bourbon list?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Over 100 bourbons in stock. Build your own flight of three for $24, order off the wall, or let the bartender lead.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>When are trivia and karaoke?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Trivia every Wednesday at 7 PM. Karaoke every Thursday at 9 PM. Both are free to play, walk-in welcome.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Why is it called Plank Road?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Named for the wooden plank road built in the 1800s connecting Green Bay to Fond du Lac. It was Wisconsin's first major highway. We sit just off the original alignment.</p></div>
+      </div>
+      <div class="faq-item reveal">
+        <button class="faq-question"><span>Can you book us for catering or private events?</span><span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Yes. Catering for groups of 20 to 200. The dining room books for private events on Sundays. Call to discuss menus and pricing.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3 class="serif">Plank Road Plate & Pour</h3>
+        <p>The pub built on Wisconsin's first highway. Bourbon, burgers, and the rhythm of a real Wisconsin community.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="https://maps.google.com/?q=1632+Mid+Valley+Dr,+De+Pere,+WI">1632 Mid Valley Dr</a></li>
+          <li><a>De Pere, WI 54115</a></li>
+          <li><a href="tel:+19206327051">(920) 632-7051</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#menu">Plates</a></li>
+          <li><a href="#bar">Bourbon & Bar</a></li>
+          <li><a href="#nights">Nightly Specials</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/plankroaddepere/" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+          <li><a>Email Updates</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Plank Road Plate & Pour · De Pere, WI</span>
+      <span>Crafted by AG1 Consulting</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const lenis = new Lenis({ duration: 1.2, smoothWheel: true });
+function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+requestAnimationFrame(raf);
+
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 80) header.classList.add('scrolled');
+  else header.classList.remove('scrolled');
+});
+
+function updateLiveStatus() {
+  const now = new Date();
+  const day = now.getDay();
+  const hour = now.getHours();
+  const isOpen = day !== 0 && (hour >= 11 || hour < 2);
+  const dot = document.getElementById('liveDot');
+  const label = document.getElementById('liveLabel');
+  if (isOpen) {
+    dot.classList.remove('closed');
+    label.textContent = 'Open · Closes 2 AM';
+  } else {
+    dot.classList.add('closed');
+    label.textContent = day === 0 ? 'Closed Sundays' : 'Opens 11 AM';
+  }
+}
+updateLiveStatus();
+setInterval(updateLiveStatus, 60000);
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.timeline({ delay: 0.3 })
+  .to('.hero-line span', { y: 0, duration: 1.2, stagger: 0.15, ease: 'power3.out' })
+  .to('#heroEyebrow', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.6')
+  .to('#heroMeta', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5')
+  .to('#heroCta', { opacity: 1, y: 0, duration: 0.8, ease: 'power2.out' }, '-=0.5');
+
+gsap.utils.toArray('.reveal').forEach(el => {
+  gsap.to(el, {
+    scrollTrigger: { trigger: el, start: 'top 88%', toggleActions: 'play none none reverse' },
+    opacity: 1, y: 0, duration: 1, ease: 'power3.out'
+  });
+});
+
+document.querySelectorAll('.faq-question').forEach(q => {
+  q.addEventListener('click', () => q.parentElement.classList.toggle('open'));
+});
+
+document.querySelectorAll('.btn-primary').forEach(btn => {
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const x = e.clientX - rect.left - rect.width / 2;
+    const y = e.clientY - rect.top - rect.height / 2;
+    btn.style.transform = `translate(${x*0.15}px, ${y*0.15}px)`;
+  });
+  btn.addEventListener('mouseleave', () => { btn.style.transform = ''; });
+});
+</script>
+
+</body>
+</html>
