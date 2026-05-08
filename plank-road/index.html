@@ -938,8 +938,8 @@ document.querySelectorAll('.faq-question').forEach(q => {
 const reserveModal = document.getElementById('reserveModal');
 const modalClose = document.getElementById('modalClose');
 document.querySelectorAll('a').forEach(a => {
-  if (a.getAttribute('href') === '#visit' && a.classList.contains('btn-primary')) return;
-  if (a.hasAttribute('data-reserve') || (a.textContent && a.textContent.trim().toLowerCase().includes('reserve'))) {
+  const txt = (a.textContent || '').trim().toLowerCase();
+  if (a.hasAttribute('data-reserve') || txt.startsWith('reserve')) {
     a.addEventListener('click', e => { e.preventDefault(); reserveModal.classList.add('visible'); });
   }
 });
