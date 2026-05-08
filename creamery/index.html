@@ -575,12 +575,15 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   background-position: center;
   cursor: default;
 }
+.mimosa-card {
+  filter: saturate(1.35);
+}
 .mimosa-card::before {
   content: '';
   position: absolute;
   inset: 0;
   background: var(--flavor, var(--gold));
-  opacity: 0.92;
+  opacity: 1;
   mix-blend-mode: color;
   transition: opacity 0.4s;
   pointer-events: none;
@@ -590,7 +593,7 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
   position: absolute;
   inset: 0;
   background: var(--flavor, var(--gold));
-  opacity: 0.18;
+  opacity: 0.40;
   mix-blend-mode: multiply;
   transition: opacity 0.4s;
   pointer-events: none;
@@ -598,10 +601,10 @@ h1, h2, h3, h4 { font-family: var(--serif); font-weight: 400; }
 .mimosa-card:hover {
   border-color: var(--flavor, var(--gold));
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(59, 42, 30, 0.18);
+  box-shadow: 0 16px 40px rgba(59, 42, 30, 0.25);
+  filter: saturate(1.55);
 }
-.mimosa-card:hover::before { opacity: 1; }
-.mimosa-card:hover::after { opacity: 0.28; }
+.mimosa-card:hover::after { opacity: 0.55; }
 .mimosa-dot {
   width: 18px; height: 18px;
   border-radius: 50%;
