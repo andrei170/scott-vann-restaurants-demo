@@ -157,6 +157,24 @@ a { color: var(--cream); text-decoration: none; }
 .restaurant-strip-item { aspect-ratio: 1; background-size: cover; background-position: center; border-radius: 2px; transition: transform 0.3s, opacity 0.3s; opacity: 0.85; }
 .restaurant-strip-item:hover { transform: scale(1.04); opacity: 1; }
 
+/* Side-by-side iframe compare */
+.iframe-section { padding: 100px 0; background: var(--bg-elevated); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.iframe-section h3 { font-family: var(--serif); font-size: clamp(32px, 4vw, 56px); font-weight: 300; letter-spacing: -0.02em; line-height: 1; margin-bottom: 16px; }
+.iframe-section h3 em { font-style: italic; color: var(--gold); }
+.iframe-section .iframe-section-sub { color: var(--cream-dim); font-size: 17px; margin-bottom: 48px; max-width: 580px; }
+.iframe-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.iframe-panel { display: flex; flex-direction: column; gap: 12px; }
+.iframe-meta { display: flex; justify-content: space-between; align-items: center; }
+.iframe-label-pill { font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase; font-weight: 600; padding: 6px 14px; border-radius: 100px; }
+.iframe-label-pill.current { background: rgba(194, 95, 74, 0.12); color: var(--copper); border: 1px solid rgba(194, 95, 74, 0.3); }
+.iframe-label-pill.new { background: rgba(217, 179, 119, 0.12); color: var(--gold); border: 1px solid var(--line); }
+.iframe-link { font-size: 12px; letter-spacing: 0.05em; color: var(--cream-dim); transition: color 0.2s; text-transform: uppercase; font-weight: 500; }
+.iframe-link:hover { color: var(--gold); }
+.iframe-frame { aspect-ratio: 4/3; background: var(--bg-card); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; position: relative; box-shadow: 0 12px 40px rgba(0,0,0,0.35); }
+.iframe-frame iframe { width: 200%; height: 200%; transform: scale(0.5); transform-origin: top left; border: 0; background: white; }
+.iframe-hint { font-size: 13px; color: var(--muted); font-style: italic; text-align: center; margin-top: 32px; }
+@media (max-width: 1024px) { .iframe-compare { grid-template-columns: 1fr; } }
+
 /* Scorecard */
 .scorecard {
   border: 1px solid var(--line); border-radius: 8px; overflow: hidden;
@@ -276,6 +294,34 @@ footer {
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="iframe-section">
+  <div class="container">
+    <h3>Or see them <em>live.</em></h3>
+    <p class="iframe-section-sub">Both sites running side by side. Scroll either one independently. The new demo is fully interactive &mdash; click "Reserve" anywhere on the right panel to see the booking flow.</p>
+    <div class="iframe-compare">
+      <div class="iframe-panel">
+        <div class="iframe-meta">
+          <span class="iframe-label-pill current">Current site</span>
+          <a href="https://thecreamerycafe.com/" target="_blank" class="iframe-link">Open in tab &rarr;</a>
+        </div>
+        <div class="iframe-frame">
+          <iframe src="https://thecreamerycafe.com/" loading="lazy" title="The Creamery — Current Site"></iframe>
+        </div>
+      </div>
+      <div class="iframe-panel">
+        <div class="iframe-meta">
+          <span class="iframe-label-pill new">A+ rebuild</span>
+          <a href="./creamery/" target="_blank" class="iframe-link">Open in tab &rarr;</a>
+        </div>
+        <div class="iframe-frame">
+          <iframe src="./creamery/" loading="lazy" title="The Creamery — A+ Rebuild"></iframe>
+        </div>
+      </div>
+    </div>
+    <p class="iframe-hint">If the left panel renders blank, click "Open in tab" &mdash; some sites block direct embedding via security headers.</p>
   </div>
 </section>
 
